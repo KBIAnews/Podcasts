@@ -14,3 +14,4 @@ class ShowListView(BuildableListView):
 
 class ShowDetailView(BuildableDetailView):
     model = Show
+    template_name = 'shows/show_detail.html'

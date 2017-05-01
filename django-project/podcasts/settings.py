@@ -138,3 +138,4 @@ AWS_SECRET_ACCESS_KEY = os.getenv('KBIA_BAKERIES_AWS_KEY')
 # Django Bakery Settings
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD_DIR = os.path.join(PROJECT_ROOT, 'baked')
+BAKERY_VIEWS= ('shows.views.ShowDetailView',)
