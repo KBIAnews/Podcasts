@@ -48,3 +48,69 @@ div.credit{
 		color: lighten($gray-dark, 30%);
 	}
 }
+
+
+header {
+	a.nav-trigger-button{
+		@include float-right;
+
+		border-radius: 0;
+		margin-top: 7px;
+		margin-right: 50px;
+
+		@include outline-button($project-primary);
+	}
+
+}
+
+
+div#nav-scr{
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	width: 0px;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+div.overlay{
+	background-color: $project-background;
+
+	.closebtn{
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+
+		&:hover{
+			color: $project-primary !important;
+		}
+	}
+
+	a{
+		padding: 8px;
+		text-decoration: none;
+		color: $gray;
+		display: block;
+		@include transition(0.3s);
+		font-weight: lighter;
+	}
+
+	div.overlay-content{
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+
+		a {
+			font-size: 36px;
+
+			&:hover{
+				color: $project-primary !important;
+			}
+		}
+	}
+
+}

@@ -11,6 +11,10 @@ $gray-lightest:             #f7f7f9 !default;
 
 // Project Colors
 $project-primary : $kbia_blue;
-
+$project-background-light: #fff;
 $project-background-dark: $gray-dark;
+$project-text-light: $gray-dark;
 $project-text-dark: $gray-lightest;
+
+$project-background: $project-background-light;
+$project-text: $project-text-light;
