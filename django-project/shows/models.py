@@ -30,6 +30,21 @@ class Show (models.Model):
         max_length=1024,
         null=True,
         blank=True)
+    overcast_url = models.URLField(
+        "Overcast Page URL",
+        max_length=1024,
+        null=True,
+        blank=True)
+    pocket_casts_url = models.URLField(
+        "Pocket Casts Page URL",
+        max_length=1024,
+        null=True,
+        blank=True)
+    npr_one_url = models.URLField(
+        "NPR One URL",
+        max_length=1024,
+        null=True,
+        blank=True)
 
     class Meta:
         ordering = ['slug']
