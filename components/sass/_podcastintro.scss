@@ -1,0 +1,29 @@
+div.podcast-intro{
+  padding-top: 0.5em;
+  @include clearfix;
+
+  img.podcast-art{
+    max-width: 250px;
+    float: left;
+    padding-right: 2rem;
+  }
+
+  h1.podcast-name{
+    font-size: 3.5rem;
+    padding-bottom: 0.3em;
+
+    &:after{
+      display: table;
+      width:120px;
+      padding-top: 10px;
+      border-bottom: 6px solid $project-primary;
+      content: "";
+    }
+  }
+
+  p{
+    font-size: 1.3rem;
+    line-height: 1.2em;
+    color: $gray-light;
+  }
+}

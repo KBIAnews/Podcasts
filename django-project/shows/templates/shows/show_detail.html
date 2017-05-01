@@ -7,5 +7,9 @@
 {% endblock %}
 
 {% block content %}
+<div class="podcast-intro">
+    <img class="podcast-art" src="{{object.image.url}}" alt="{{object.name}}">
     <h1 class="podcast-name">{{object.name}}</h1>
+    <p>{{object.description}}</p>
+</div>
 {% endblock %}
