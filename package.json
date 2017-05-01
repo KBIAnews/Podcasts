@@ -1,0 +1,27 @@
+{
+  "name": "kbia-podcasts",
+  "version": "1.0.0",
+  "description": "KBIA's podcast directory.",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "matchdep": "^1.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KBIAnews/Podcasts.git"
+  },
+  "author": "Nathan Lawrence",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KBIAnews/Podcasts/issues"
+  },
+  "homepage": "https://github.com/KBIAnews/Podcasts#readme"
+}
