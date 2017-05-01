@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'bakery',
+    'shows',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,7 @@ AWS_STORAGE_BUCKET_NAME = 'media.kbia.org'
 AWS_LOCATION = 'podcast-dir'
 AWS_ACCESS_KEY_ID = os.getenv('KBIA_BAKERIES_AWS_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('KBIA_BAKERIES_AWS_KEY')
+
+# Django Bakery Settings
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BUILD_DIR = os.path.join(PROJECT_ROOT, 'baked')

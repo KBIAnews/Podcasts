@@ -152,3 +152,9 @@ components-build
 
 # Sass Cache
 .sass-cache
+
+# Ideastorm IDE files
+.idea
+
+# Django Bakery Bake Directory
+baked
