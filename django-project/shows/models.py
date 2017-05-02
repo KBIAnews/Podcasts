@@ -54,3 +54,15 @@ class Show (models.Model):
 
     def __str__(self):
         return "%s" % self.name
+
+class Episode(models.Model):
+    name = models.CharField(max_length=512)
+    date = models.DateField()
+    audio_url  = models.URLField("MP3 File URL", max_length=1024)
+    show = models.ForeignKey(Show)
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return "%s (%s)" % self.name, self.show.name
