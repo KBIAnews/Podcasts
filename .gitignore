@@ -161,3 +161,6 @@ baked
 
 # Django Admin Static Files
 django-project/static/admin
+
+# Built Sass Stylesheets
+django-project/static/css/styles.css

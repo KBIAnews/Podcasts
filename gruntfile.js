@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		uglify: {
 			my_target:{
 				files: {
-					'components-build/js/player.js': ['components/js/player.js']
+					'django-project/static/js/player.js': ['django-project/static/components/js/player.js']
 				}
 			}
 		},
@@ -20,11 +20,11 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			scripts: {
-				files: ['components/js/*.js'],
+				files: ['django-project/static/components/js/*.js'],
 				tasks: ['uglify']
 			},
 			sass: {
-				files: ['components/sass/*.scss'],
+				files: ['django-project/static/components/sass/*.scss'],
 				tasks: ['compass:dev']
 			}
 		}
