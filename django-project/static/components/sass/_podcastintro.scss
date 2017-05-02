@@ -8,11 +8,43 @@ div.podcast-intro{
     padding-right: 2rem;
     padding-bottom: 1rem;
 
+    @media screen and (max-width: $medium-screen-width) {
+      max-width: 200px;
+    }
+
+    @media screen and (max-width: $small-screen-width) {
+      max-width: 25%;
+      padding-right: 1rem;
+    }
+
+    @media screen and (max-width: $tiny-screen-width) {
+      padding-right: 0.5rem;
+    }
+
   }
 
   h1.podcast-name{
     font-size: 3.5rem;
     padding-bottom: 0.3em;
+
+    @media screen and (max-width: $medium-screen-width) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: $small-screen-width) {
+      padding-top: 1rem;
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: $tiny-screen-width) {
+      padding-top: 0rem;
+      font-size: 2.0rem;
+
+      &:after{
+        padding-top: 8px;
+      }
+    }
+
 
     &:after{
       display: table;
@@ -27,10 +59,16 @@ div.podcast-intro{
     font-size: 1.3rem;
     line-height: 1.2em;
     color: $gray-light;
+
+    @media screen and (max-width: $medium-screen-width) {
+      @include clearfix;
+      font-size: 1rem;
+    }
   }
 
   div.listen-gallery{
     margin-top: 1rem;
+    height: 35px;
     margin-bottom: 1rem;
 
     a {
@@ -40,6 +78,7 @@ div.podcast-intro{
     }
     img{
       max-height: 34px;
+      margin-bottom: 1rem;
     }
   }
 
@@ -49,6 +88,9 @@ div.podcast-intro{
       color: lighten($gray-light, 20);
       font-size: 1rem;
       text-transform: uppercase;
+
+
+
 
       &:after{
         display: table;
@@ -71,4 +113,10 @@ h2{
      border-bottom: 1px solid lighten($gray-light, 30);
      content: "";
     }
+}
+
+div.mobile-buffer{
+  @media screen and (max-width: $small-screen-width){
+    clear: both;
+  }
 }

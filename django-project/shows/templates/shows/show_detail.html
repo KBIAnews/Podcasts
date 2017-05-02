@@ -10,6 +10,7 @@
 <div class="podcast-intro">
     <img class="podcast-art" src="{{object.image.url}}" alt="{{object.name}}">
     <h1 class="podcast-name">{{object.name}}</h1>
+    <div class="mobile-buffer"></div>
     <p>{{object.description}}</p>
 
     <div class="listen-gallery">
@@ -21,7 +22,7 @@
         {% endif %}
         {% if object.npr_one_url %}
             <a href="{{object.itunes_url}}">
-                <img class="site-badge npr-badge" src="https://s3.amazonaws.com/media.kbia.org/logos/npr_podcast_badge.svg"
+                <img class="site-badge npr-badge" src="https://s3.amazonaws.com/media.kbia.org/logos/npr_one.png"
                     alt="Find on NPR One.">
             </a>
         {% endif %}
