@@ -121,21 +121,24 @@ USE_L10N = True
 USE_TZ = True
 
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BUILD_DIR = os.path.join(PROJECT_ROOT, 'static')
 
 # File Storage.
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_STORAGE_BUCKET_NAME = 'media.kbia.org'
 AWS_LOCATION = 'podcast-dir'
 AWS_ACCESS_KEY_ID = os.getenv('KBIA_BAKERIES_AWS_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('KBIA_BAKERIES_AWS_KEY')
+AWS_QUERYSTRING_AUTH = False
 
 # Django Bakery Settings
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD_DIR = os.path.join(PROJECT_ROOT, 'baked')
 BAKERY_VIEWS= ('shows.views.ShowDetailView',)

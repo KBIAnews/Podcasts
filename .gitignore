@@ -158,3 +158,6 @@ components-build
 
 # Django Bakery Bake Directory
 baked
+
+# Django Admin Static Files
+django-project/static/admin
