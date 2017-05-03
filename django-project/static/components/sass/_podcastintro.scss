@@ -84,6 +84,8 @@ div.podcast-intro{
 
 }
   div.secondary-listening-gallery{
+    @include clearfix;
+
     h2{
       color: lighten($gray-light, 20);
       font-size: 1rem;
@@ -100,6 +102,17 @@ div.podcast-intro{
         content: "";
       }
     }
+
+    a{
+      margin-top: 1rem;
+      float: left;
+
+      img{
+        max-height: 30px;
+        padding-right: 1rem;
+      }
+    }
+
   }
 
 h2{

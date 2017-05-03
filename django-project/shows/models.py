@@ -58,7 +58,7 @@ class Show (models.Model):
 class Episode(models.Model):
     name = models.CharField(max_length=512)
     date = models.DateField()
-    audio_url  = models.URLField("MP3 File URL", max_length=1024)
+    audio_url = models.URLField("MP3 File URL", max_length=1024)
     show = models.ForeignKey(Show)
 
     class Meta:

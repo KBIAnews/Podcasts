@@ -15,3 +15,8 @@ class ShowListView(BuildableListView):
 class ShowDetailView(BuildableDetailView):
     model = Show
     template_name = 'shows/show_detail.html'
+
+    def get_object(self):
+        if self.kwargs['slug']:
+            return Show.objects.get(slug=self.kwargs['slug'])
+        return super(ShowDetailView, self).get_objects()
