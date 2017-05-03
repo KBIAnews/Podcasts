@@ -59,10 +59,10 @@ class Episode(models.Model):
     name = models.CharField(max_length=512)
     date = models.DateField()
     audio_url = models.URLField("MP3 File URL", max_length=1024)
-    show = models.ForeignKey(Show)
+    show = models.ForeignKey(Show, related_name='episodes')
 
     class Meta:
-        ordering = ['date']
+        ordering = ['-date']
 
     def __str__(self):
-        return "%s (%s)" % self.name, self.show.name
+        return "%s" % self.name
