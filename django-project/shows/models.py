@@ -66,3 +66,29 @@ class Episode(models.Model):
 
     def __str__(self):
         return "%s" % self.name
+
+class Category(models.Model):
+    slug = models.SlugField("Category 'Slug'", unique=True)
+    name = models.CharField("Category Display Name", max_length=1024)
+    order = models.IntegerField("Category Display Position on Home Screen", unique=True)
+    display_on_home = models.BooleanField("Display this category on Home Screen", default=True)
+    shows = models.ManyToManyField(
+        Show,
+        through='ShowCategory',
+        through_fields=('category', 'show')
+    )
+
+    class Meta:
+        ordering = ['-order']
+        verbose_name_plural = "categories"
+
+    def __str__(self):
+        return "%s" % self.name
+
+class ShowCategory(models.Model):
+    show = models.ForeignKey(Show, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    order = models.IntegerField()
+
+    class Meta:
+        ordering = ['-order']
