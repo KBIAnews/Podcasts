@@ -48,7 +48,11 @@ div.home-content {
       a.show-link-block{
         margin-top: 1rem;
         display: block;
-        @include clearfix;
+
+        @media screen and (max-width: $small-screen-width){
+          @include clearfix;
+        }
+
 
         color: $gray;
         text-decoration: none;
@@ -71,6 +75,50 @@ div.home-content {
           pointer-events: auto;
           cursor: pointer !important;
         }
+
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: $small-screen-width){
+    div.show-listing-block {
+
+      div.show-listing-block-category {
+        @include clearfix;
+
+        h2 {
+
+        }
+
+        a.show-link-block {
+          display: inline;
+
+          z-index: 85;
+          pointer-events: auto;
+          cursor: pointer !important;
+
+          width: 150px;
+          margin-right: 10px;
+
+          float: left;
+
+          h3 {
+            display: none;
+          }
+
+          div {
+            display: inline;
+          }
+          img.show-block-art {
+            float:none;
+            max-width: 100% !important;
+
+          }
+        }
+
+
 
       }
 
