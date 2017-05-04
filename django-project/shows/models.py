@@ -79,7 +79,7 @@ class Category(models.Model):
     )
 
     class Meta:
-        ordering = ['-order']
+        ordering = ['order']
         verbose_name_plural = "categories"
 
     def __str__(self):
@@ -91,4 +91,4 @@ class ShowCategory(models.Model):
     order = models.IntegerField()
 
     class Meta:
-        ordering = ['-order']
+        ordering = ['order']
