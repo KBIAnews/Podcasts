@@ -10,6 +10,7 @@ class Show (models.Model):
     name = models.CharField(max_length=1024)
     description = models.TextField()
     image = models.ImageField(upload_to="shows/images")
+    overall_order = models.IntegerField("Overall Ordering - Use instead of per item.", default=0)
     feed_url = models.URLField(
         "Podcast (RSS) Feed URL",
         max_length=1024,
@@ -47,7 +48,7 @@ class Show (models.Model):
         blank=True)
 
     class Meta:
-        ordering = ['slug']
+        ordering = ['overall_order','slug']
 
     def get_absolute_url(self):
         return "/shows/%s/" % self.slug
@@ -86,9 +87,9 @@ class Category(models.Model):
         return "%s" % self.name
 
 class ShowCategory(models.Model):
-    show = models.ForeignKey(Show, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    order = models.IntegerField()
+    show = models.ForeignKey(Show, on_delete=models.CASCADE, related_name="membership")
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="membership")
+    order = models.IntegerField("Nonfunctional Order", default=0)
 
     class Meta:
         ordering = ['order']
