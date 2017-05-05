@@ -151,4 +151,5 @@ AWS_QUERYSTRING_AUTH = False
 BUILD_DIR = os.path.join(PROJECT_ROOT, 'baked')
 AWS_BUCKET_NAME = 'kbia-podcasts'
 AWS_S3_ENDPOINT = 'https://s3-accelerate.amazonaws.com'
-BAKERY_VIEWS= ('shows.views.ShowDetailView',)
+BAKERY_VIEWS= ('shows.views.ShowDetailView',
+               'shows.views.HomePageView',)
