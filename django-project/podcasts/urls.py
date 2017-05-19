@@ -25,3 +25,6 @@ urlpatterns = [
     url(r'^$', HomePageView.as_view()),
     url(r'(?P<slug>[\w-]+)/$', ShowDetailView.as_view(), name='show')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+admin.site.site_header = 'KBIA Podcast Admin'
+admin.site.site_title = 'KBIA Podcast Admin'
